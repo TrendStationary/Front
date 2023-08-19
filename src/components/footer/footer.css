@@ -19,7 +19,7 @@ footer::after{
 }
 footer .footer-container{
     width: 90%;
-    margin: 40px auto;
+    margin: 45px auto;
     display: flex;
     justify-content: space-between;
 }
@@ -172,3 +172,27 @@ footer .footer-second .text p{
     font-weight: 300;
     margin-bottom: 0;
 } 
+
+
+
+@media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Stack columns vertically */
+      align-items: center; /* Center items horizontally */
+      text-align: center; /* Center text content */
+    }
+  
+    .footer-box {
+      margin-bottom: 20px; /* Add some space between footer boxes */
+    }
+  
+    .footer-second {
+      flex-direction: column; /* Stack columns vertically */
+      align-items: center; /* Center items horizontally */
+      text-align: center; /* Center text content */
+    }
+  
+    .payments {
+      margin-top: 20px; /* Add space between payment icons */
+    }
+  }
