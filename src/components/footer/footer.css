@@ -1,25 +1,14 @@
 footer{
     width: 100%;
-    min-height: 40vh;
+    min-height: 45vh;
     background-color: #000;
     display: flex;
     flex-direction: column;
-    position: relative;
-}
-footer::after{
-    content: " ";
-    border-bottom: 1px solid rgba(246,246,246,.2);
-    width: 100%;
-    height: 1px;
-    text-align: center;
-    display: block;
-    position: absolute;
-    bottom: 60px;
-    left: 0;
 }
 footer .footer-container{
     width: 90%;
-    margin: 45px auto;
+    padding: 5px 0;
+    margin: auto;
     display: flex;
     justify-content: space-between;
 }
@@ -142,15 +131,28 @@ footer .footer-second{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
+    padding: 14px 0;
+    position: relative;
+}
+footer .footer-second::after{
+    content: " ";
+    border-bottom: 1px solid rgba(246,246,246,.2);
+    width: 100%;
+    height: 1px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0;
 }
 footer .footer-second .text{
-    width: 50%;
+    width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 footer .footer-second .payments{
-    width: 40%;
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -174,25 +176,3 @@ footer .footer-second .text p{
 } 
 
 
-
-@media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column; /* Stack columns vertically */
-      align-items: center; /* Center items horizontally */
-      text-align: center; /* Center text content */
-    }
-  
-    .footer-box {
-      margin-bottom: 20px; /* Add some space between footer boxes */
-    }
-  
-    .footer-second {
-      flex-direction: column; /* Stack columns vertically */
-      align-items: center; /* Center items horizontally */
-      text-align: center; /* Center text content */
-    }
-  
-    .payments {
-      margin-top: 20px; /* Add space between payment icons */
-    }
-  }
