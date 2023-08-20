@@ -13,6 +13,7 @@ footer .footer-container{
     justify-content: space-between;
 }
 footer .footer-container .footer-box{
+    text-align: center;
     width: 32%;
     display: flex;
     align-items: center;
@@ -32,12 +33,12 @@ footer .footer-container .footer-box.special:after {
     right: 0;
 }
 footer .footer-container .footer-box .icons{
-    width: 45%;
+    min-width: 45%;
     height: 60px;
     margin-top: 5px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    gap: 10px;
 }
 footer .footer-container .footer-box .icons .icon{
     width: 30px;
@@ -101,7 +102,7 @@ footer .footer-container .footer-box p{
     letter-spacing: .8px;
 }
 footer .footer-container .footer-box .subscribe{
-    width: 70%;
+    min-width: 70%;
     height: 35px;
     display: flex;
     align-items: center;
@@ -152,6 +153,13 @@ footer .footer-second .text{
     align-items: center;
     justify-content: center;
 }
+footer .footer-second .text p{
+    font-size: 13px;
+    letter-spacing: 0.8px;
+    color: #b2b2b2;
+    font-weight: 300;
+    margin-bottom: 0;
+}
 footer .footer-second .payments{
     display: flex;
     gap: 10px;
@@ -167,12 +175,147 @@ footer .footer-second .payments img{
 footer .footer-second .payments img:hover{
     -webkit-filter: grayscale(0);
 }
-footer .footer-second .text p{
-    font-size: 13px;
-    letter-spacing: 0.8px;
-    color: #b2b2b2;
-    font-weight: 300;
-    margin-bottom: 0;
-} 
+ 
 
 
+/* MEDIA QUERY */
+
+/* Styles for screens with a width of 1400px and above (XXL) */
+@media (min-width: 1490px) {
+    footer .footer-container .footer-box.special:after {
+        border-right: 4px solid rgba(246,246,246,.2);
+        height: 210px;
+    }
+    footer .footer-container .footer-box h5{
+        letter-spacing: 5px;
+        font-size: 35px;
+        font-weight: 600;
+        text-align: center;
+    }
+    footer .footer-container .footer-box ul li{
+        line-height: 44px;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    footer .footer-container .footer-box span a{
+        line-height: 44px;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    footer .footer-container .footer-box .icons{
+        margin-top: 32px;
+    }
+    footer .footer-container .footer-box .icons .icon{
+        width: 50px;
+        height: 50px;
+    }
+    svg{
+        font-size: 35px;
+    }
+    footer .footer-container .footer-box p{
+        line-height: 44px;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    footer .footer-container .footer-box .subscribe{
+        height: 50px;
+        margin-top: 30px;
+    }
+    footer .footer-container .footer-box .subscribe input::placeholder{
+        font-size: 20px;
+    }
+    footer .footer-container .footer-box .subscribe button{
+        font-size: 20px;
+    }
+    footer .footer-second{
+        padding: 40px 0;
+    }
+    footer .footer-second::after{
+        border-bottom: 4px solid rgba(246,246,246,.2);
+    }
+    footer .footer-second .text p{
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    footer .footer-second .payments{
+        gap: 20px;
+    }
+    footer .footer-second .payments img{
+        width: 44px;
+        height: 32px;
+    }
+}
+/* Styles for screens with a width between 768px and 922px */
+@media (min-width: 768px) and (max-width: 922px) {
+    footer{
+        padding: 15px 0;
+    }
+    footer .footer-container{
+        width: 90%;
+        padding: 5px 0;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    footer .footer-container .footer-box.special:after {
+        top: 40px;
+    }
+    footer .footer-container .footer-box .subscribe{
+        min-width: 60%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    footer .footer-container .footer-box .subscribe input{
+        width: 65%;
+    }
+    footer .footer-container .footer-box .subscribe input::placeholder{
+        font-size: 9px;
+        padding-left: 5px;
+    }
+    footer .footer-container .footer-box .subscribe button{
+        font-size: 10px;
+        width: 35%;
+    }
+    footer .footer-container .footer-box .icons{
+        width: 62%;
+        height: 20px;
+    }
+    footer .footer-container .footer-box .icons .icon{
+        width: 20px;
+        height: 20px;
+    }
+    svg{
+        font-size: 14px;
+    }
+    footer .footer-second .text p{
+        font-size: 10px;
+    }
+    footer .footer-second .payments{
+        gap: 8px;
+    }
+    footer .footer-second .payments img{
+        width: 30px;
+        height: 18px;
+    }
+}
+/* Styles for screens with a width less than 767 */
+@media (max-width: 767.88px) {
+    footer .footer-container{
+        padding: 15px 0;
+    }
+    footer .footer-container .footer-box.special:after {
+        border-right: 0 
+    }    
+    footer .footer-second{
+        flex-direction: column;
+        text-align: center;
+    }
+    footer .footer-second .text p{
+        font-size: 10px;
+    }
+    footer .footer-second .payments{
+        margin-top: 10px;
+    }
+}
