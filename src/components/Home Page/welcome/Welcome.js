@@ -1,7 +1,7 @@
 import React from 'react';
 import './welcome.css';
 import { Col, Row } from 'react-bootstrap';
-import img1 from '../../images/girl-welcome.jpg';
+import img1 from '../../../images/girl-welcome.jpg';
 import { BiSolidTruck } from 'react-icons/bi';
 import { BsRocketTakeoff } from 'react-icons/bs';
 import { TbPigMoney } from 'react-icons/tb';

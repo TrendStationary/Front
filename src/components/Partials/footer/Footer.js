@@ -1,10 +1,10 @@
 import React from 'react';
 import './footer.css';
-import img1 from '../../images/visa.png';
-import img2 from '../../images/american_express.png';
-import img3 from '../../images/discover.png';
-import img4 from '../../images/google_wallet.png';
-import img5 from '../../images/paypal.png';
+import img1 from '../../../images/visa.png';
+import img2 from '../../../images/american_express.png';
+import img3 from '../../../images/discover.png';
+import img4 from '../../../images/google_wallet.png';
+import img5 from '../../../images/paypal.png';
 import { BiLogoFacebook } from 'react-icons/bi';
 import {PiInstagramLogoLight} from 'react-icons/pi';
 import {TiSocialTwitter} from 'react-icons/ti';
