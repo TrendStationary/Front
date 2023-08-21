@@ -2,7 +2,11 @@
 .navbar-container {
     height: 60px;
   }
-  
+
+.my-nav {
+  z-index: 1000 !important;
+}
+
 .logo {
     max-height: 60px;
   }

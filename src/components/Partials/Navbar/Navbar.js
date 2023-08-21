@@ -11,8 +11,8 @@ import { HiOutlineShoppingBag } from 'react-icons/hi';
 export default function NavbarApp() {
   return (
     <div>
-        <Container className='position-absolute' style={{"top":"40px","left":"50%","transform":"translate(-50%)"}}>
-        <Navbar expand="lg" className='p-0'>
+        <Container className='position-absolute my-nav' style={{"top":"40px","left":"50%","transform":"translate(-50%)"}}>
+        <Navbar expand="lg" className='p-0 nav-bg'>
         <Navbar.Brand href="/">
           <img src={logo} alt="Logo" className="logo" />
         </Navbar.Brand>
