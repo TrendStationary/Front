@@ -4,6 +4,9 @@ footer{
     background-color: #000;
     display: flex;
     flex-direction: column;
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
 }
 footer .footer-container{
     width: 90%;
