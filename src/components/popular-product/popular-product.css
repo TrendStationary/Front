@@ -1,0 +1,49 @@
+section{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ededf0;
+    position: relative;
+    overflow: hidden;
+}
+section .popular-product-container{
+    width: 90%;
+    margin: auto;
+}
+section h5{
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 50px;
+    padding: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    position: relative;
+}
+section h5::after{
+    content: '';
+    border-bottom: 2px solid #d22e2c;
+    width: 5%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+section nav.links-filter{
+    width: 50%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+section nav.links-filter a{
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: 0.5s;
+}
+section nav.links-filter a.active{
+    color: #d22e2c;
+}
+section nav.links-filter a:hover{
+    color: #d22e2c;
+}

@@ -1,20 +1,19 @@
 import React from 'react'
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
-import logo from '../../../images/logo.jpeg'; 
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import './Navbar.css';
+import logo from '../../../images/logo.jpeg';
+import './navbar.css';
 import { FaUserCircle } from 'react-icons/fa';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
 
 
 
-export default function NavbarApp() {
+function NavBar() {
   return (
     <div>
         <Container className='position-absolute my-nav' style={{"top":"40px","left":"50%","transform":"translate(-50%)"}}>
         <Navbar expand="lg" className='p-0 nav-bg'>
         <Navbar.Brand href="/">
-          <img src={logo} alt="Logo" className="logo" />
+          <img src={logo} alt='Logo' className='logo'/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
@@ -66,7 +65,8 @@ export default function NavbarApp() {
           </Nav>
         </Navbar.Collapse>
     </Navbar>
-    </Container>
+        </Container>
     </div>
   )
 }
+export default NavBar
