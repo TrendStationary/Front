@@ -1,14 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
-// import Navbar from './components/Partials/Navbar/Navbar';
 import Footer from './components/Partials/footer/Footer';
 import NavBar from './components/Partials/Navbar/NavBar';
-// import NavBar from './components/Partials/Navbar/NavBar';
-// import Navbar from './components/Partials/navbar/Navbar';
-
-// import Navbar from './components/Partials/navbar/Navbar';
-// import Footer from './components/Partials/footer';
 
 function App() {
   return (
@@ -23,6 +17,8 @@ function App() {
           <Route path='highlighter' element={<h1>highlighter</h1>}/>  
         </Route>
         <Route path='/shop' element={<h1>SHOP Page</h1>} />
+        <Route path='/blogs' element={<h1>Blogs Page</h1>} />
+        <Route path='/about' element={<h1>about Page</h1>} />
       </Routes>
       <Footer/>
     </>
