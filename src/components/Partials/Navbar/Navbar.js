@@ -14,9 +14,14 @@ import { LiaShoppingBagSolid } from 'react-icons/lia';
 function AppNavBar() {
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [menudropdownOpen, setMenudropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
+  };
+
+  const toggleMenuDropdown = () => {
+    setMenudropdownOpen(!menudropdownOpen);
   };
 
   return (
@@ -57,7 +62,7 @@ function AppNavBar() {
             </div>
             {/* <!--start mobile--> */}
             <div className='d-flex col-12 p-0 align-items-center menu-mobile'>
-             <div className='d-flex col-8 px-2' style={{"cursor":"pointer"}}>
+             <div className='d-flex col-8 px-2' style={{"cursor":"pointer"}} onClick={toggleMenuDropdown}>
               <div className='mr-2'><FaBars style={{"fontSize":"25px"}}/></div>
               <div><h5>Menu</h5></div>
              </div>
@@ -79,6 +84,14 @@ function AppNavBar() {
                   </div>
                 </ul>
               </div>
+            </div>
+            <div className={`menu-dropdown col-12 ${menudropdownOpen ? 'open' : ''}`}>
+              <ul className='m-0'>
+                <li className='py-2 px-1'><Link to="/">Home</Link></li>
+                <li className='py-2 px-1'><Link to="/shop">Shop</Link></li>
+                <li className='py-2 px-1'><Link to="/about">About Us</Link></li>
+                <li className='py-2 px-1'><Link to="/contact">Contact</Link></li>
+              </ul>
             </div>
             </div>
             {/* <!--end mobile--> */}
