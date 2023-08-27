@@ -1,84 +1,144 @@
-/* Add padding to the container */
-.navbar-container {
-    height: 60px;
-  }
-
-.my-nav {
-  z-index: 1000 !important;
+.container-header {}
+header {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  z-index: 1000;
 }
 
-.logo {
-    max-height: 60px;
-  }
+.links-header{
+}
 
+.logo hr {
+   display: none;
+}
 
-  /* Add space between navigation links */
-.navbar-links .nav-link {
-    padding: 23px 0;
+.bg-header {
+  background-color: #fff;
+}
+
+.links-ul-header {
+  max-height: 100%;
+  height: 100%;
+}
+
+.links-ul-header li {
     position: relative;
-    margin-right: 20px; 
-    width: 100px;
-    text-align: center;
-    font-weight: 500;
-    font-family: 'Mali', cursive;
-
-  }
-
-.navbar-links .nav-link::after {
-    content: "";
-    height: 3px;
-    width: 100%;
-    background-color: #f75c03;
-    bottom: 0px;
-    left: 0;
-    position: absolute;
-    transform: scale(0);
-    transition: ease 0.3s;
-}  
-
-.navbar-links .nav-link:hover::after{
-    transform: scale(1);
-}
-
-.navbar-links .nav-link:hover {
-    background-color: #f5f5f5;
-}
-  
-  /* Remove margin from the last link to avoid unnecessary space */
-.navbar-links .nav-link:last-child {
-    margin-right: 0;
-  }
-  
- /* Remove the arrow icon from the Navbar Dropdown */
-.navbar-nav .nav-item.dropdown .dropdown-toggle::after {
-    display: none;
-  }
-  
- /* Change color of FaUserCircle on hover and click */
-.dropdown-toggle:hover > svg, 
-.dropdown-toggle:focus > svg {
-  color: #57da0b; 
-}
-
-.shopping-bag-link:hover > svg {
-    color: #57da0b; /* Change to the desired color */
-  }
-  
-.dropdown-toggle > svg,
-.shopping-bag-link > svg {
-    color: #f75c03;
-    font-size: 24px;
-  }
-
-.justify-content-end {
+    list-style-type: none;
     display: flex;
     align-items: center;
-    background-color: #e8e8e8;
+    justify-content: center;
+    width: 80px;
+    max-width: 80px;
+    transition: 0.5s;
+}
+
+.links-ul-header li:not(:last-child) {
+  margin-right: 4em;
+}
+
+.links-ul-header li::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color:rgb(219, 81, 7);
+  bottom: 0;
+  left: 0;
+  transform: scale(0);
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.links-ul-header li:hover::before {
+  transform: scale(1);
+}
+
+.links-ul-header li:hover {
+  background-color: #f5f5f5;
+}
+
+.links-ul-header li a{
+  color: #000;
+}
+
+.menu-mobile {
+  display: none !important;
+}
+
+.user {
+  position: relative;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 100%;
+  left: -35%;
+  background-color: #ffffff;
+  display: none;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top left;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.user-dropdown.open {
+  display: block;
+  opacity: 1; 
+  transform: scaleY(1);
+}
+
+.user-dropdown ul li a {
+  color: #000;
+  transition: 0.3s;
+}
+
+.user-dropdown ul li:hover a {
+  color: rgb(219, 81, 7);
+}
+
+
+
+/*media*/
+@media(min-width:320px) and (max-width:425px){
+  header {
+    position: static;
+    z-index: 1000;
+  }
+
+  .logo {
+    align-items: center !important;
+    flex-direction: column;
+  }
+
+  .logo hr {
+    display: block;
+    width: 100%;
+    background-color: #f5f5f5;
+    margin: 0;
+  }
+
+  .links-header {
+    display: none !important;
+  }
+
+  .user , .bag {
+    padding: 10px 5px;
+  }
+
+  .menu-mobile {
+    display: flex !important;
+  }
+
+  .icons-header {
+    display: none !important;
+  }
+
+  .user-dropdown {   
+    left: -100% !important;
+    z-index: 100;
   }
   
-.user-icon {
-  display: flex;
-  align-items: center;
-  padding: 15px 0;
-  background-color: #f5f5f5;
 }

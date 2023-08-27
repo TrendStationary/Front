@@ -2,12 +2,12 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Footer from './components/Partials/footer/Footer';
-import NavBar from './components/Partials/Navbar/NavBar';
+import AppNavBar from './components/Partials/Navbar/Navbar';
 
 function App() {
   return (
     <>
-      <NavBar/>
+      <AppNavBar/>
       <Routes>
         <Route path='/' element={<Home />} >
           <Route index element={<h1>clipboard</h1>}/> 

@@ -4,4 +4,6 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: 'Mali', cursive;
+    list-style-type: none;
+    text-decoration: none !important;
 }
